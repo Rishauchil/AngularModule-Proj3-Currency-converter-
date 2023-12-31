@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="currencyConverterApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+</head>
+<body ng-controller="CurrencyConverterController">
+    <h2>Currency Converter</h2>
+    <label>Amount:</label>
+    <input type="number" ng-model="amount" />
+
+    <label>From Currency:</label>
+    <select ng-model="fromCurrency" ng-options="currency for currency in currencyList"></select>
+
+    <label>To Currency:</label>
+    <select ng-model="toCurrency" ng-options="currency for currency in currencyList"></select>
+
+    <button ng-click="convert()">Convert</button>
+
+    <h3>Result: {{ result }}</h3>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
